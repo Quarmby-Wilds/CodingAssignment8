@@ -1,9 +1,8 @@
-let again = true
+let again = true;
 
 const answers = ["bear", "ninja", "hunter"];
 
 while (again === true) {
-
     // Welcome prompt
 
     let name = prompt("Welcome to Bear, Ninja, Hunter. Please enter your name.");
@@ -17,7 +16,6 @@ while (again === true) {
     // Start game
 
     let choice = prompt("Please enter Bear, Ninja, or Hunter.").toLocaleLowerCase();
-
     if (choice === null) {
         break;
     }
@@ -33,10 +31,10 @@ while (again === true) {
     if (choice === null) {
         break;
     }
-    
+
     // Generate computer answer
 
-    let compChoice
+    let compChoice;
     const randomNumber = Math.floor(Math.random() * 3) + 1;
     if (randomNumber === 1) {
         compChoice = "Bear";
@@ -50,10 +48,11 @@ while (again === true) {
 
     let results;
 
-    switch(compChoice) {
+    switch (compChoice) {
         case "Bear":
             if (choice === "ninja") {
-                results = name + ", you picked " + choice + ".\nThe computer picked " + compChoice + ".\nComputer wins.";
+                results =
+                    name + ", you picked " + choice + ".\nThe computer picked " + compChoice + ".\nComputer wins.";
             }
             if (choice === "hunter") {
                 results = name + ", you picked " + choice + ".\nThe computer picked " + compChoice + ".\nYou win!";
@@ -61,7 +60,8 @@ while (again === true) {
             break;
         case "Ninja":
             if (choice === "hunter") {
-                results = name + ", you picked " + choice + ".\nThe computer picked " + compChoice + ".\nComputer wins.";
+                results =
+                    name + ", you picked " + choice + ".\nThe computer picked " + compChoice + ".\nComputer wins.";
             }
             if (choice === "bear") {
                 results = name + ", you picked " + choice + ".\nThe computer picked " + compChoice + ".\nYou win!";
@@ -69,7 +69,8 @@ while (again === true) {
             break;
         case "Hunter":
             if (choice === "bear") {
-                results = name + ", you picked " + choice + ".\nThe computer picked " + compChoice + ".\nComputer wins.";
+                results =
+                    name + ", you picked " + choice + ".\nThe computer picked " + compChoice + ".\nComputer wins.";
             }
             if (choice === "ninja") {
                 results = name + ", you picked " + choice + ".\nThe computer picked " + compChoice + ".\nYou win!";
@@ -95,5 +96,4 @@ while (again === true) {
     } else {
         again = false;
     }
-
 }
